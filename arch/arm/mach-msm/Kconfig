@@ -103,6 +103,11 @@ config CPUSPEED_LOW768
 	help
 	  Gives frequency table 19200 122880 245760 768000
 
+config CPUSPEED_LOW787
+        bool "19MHz - 787MHz"
+        help
+          Gives frequency table 19200 122880 245760 787200
+
 config CPUSPEED_HIGH652
         bool "352MHz - 652MHz"
         help
@@ -127,6 +132,12 @@ config CPUSPEED_HIGH768
 	bool "352MHz - 768MHz"
 	help
 	  Gives frequency table 352000 768000
+
+config CPUSPEED_HIGH787
+        bool "352MHz - 787MHz"
+        help
+          Gives frequency table 352000 787200
+
 endchoice
 
 config PERFLOCK

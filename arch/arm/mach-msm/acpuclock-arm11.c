@@ -246,6 +246,15 @@ static struct cpufreq_frequency_table msm72xx_freq_table[] = {
         { 4, CPUFREQ_TABLE_END },
 /* Default low freq table 768 OC end */
 #endif
+#ifdef CONFIG_CPUSPEED_LOW787
+/* Default low freq table 787 OC start */
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 245760 },
+        { 3, 787200 },
+        { 4, CPUFREQ_TABLE_END },
+/* Default low freq table 768 OC end */
+#endif
 #ifdef CONFIG_CPUSPEED_HIGH652
 /* Default high freq table 652 OC start */
         { 0, 352000 },
@@ -280,6 +289,13 @@ static struct cpufreq_frequency_table msm72xx_freq_table[] = {
 	{ 1, 768000 },
         { 2, CPUFREQ_TABLE_END },
 /* Default high freq table 768 OC end */
+#endif
+#ifdef CONFIG_CPUSPEED_HIGH787
+/* Default high freq table 787 OC start */
+        { 0, 352000 },
+        { 1, 787200 },
+        { 2, CPUFREQ_TABLE_END },
+/* Default high freq table 787 OC end */
 #endif
 
 #else
