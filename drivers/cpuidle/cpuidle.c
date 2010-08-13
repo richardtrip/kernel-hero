@@ -65,14 +65,13 @@ static void cpuidle_idle_call(void)
 		return;
 	}
 
-#if 0
 	/* shows regressions, re-enable for 2.6.29 */
 	/*
 	 * run any timers that can be run now, at this point
 	 * before calculating the idle duration etc.
 	 */
 	hrtimer_peek_ahead_timers();
-#endif
+
 	/* ask the governor for the next state */
 	next_state = cpuidle_curr_governor->select(dev);
 	if (need_resched())
@@ -275,6 +274,7 @@ static int __cpuidle_register_device(struct cpuidle_device *dev)
 	init_completion(&dev->kobj_unregister);
 
 	poll_idle_init(dev);
+
 
 	per_cpu(cpuidle_devices, dev->cpu) = dev;
 	list_add(&dev->device_list, &cpuidle_detected_devices);

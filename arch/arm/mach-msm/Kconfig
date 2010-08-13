@@ -78,6 +78,11 @@ config CPUSPEED_LOW614
 	help
 	  Gives frequency table 19200 122880 245760 614400
 
+config CPUSPEED_LOW652
+        bool "19MHz - 652MHz"
+        help
+          Gives frequency table 19200 122880 245760 652800
+
 config CPUSPEED_LOW691
 	bool "19MHz - 691MHz"
 	help
@@ -97,6 +102,11 @@ config CPUSPEED_LOW768
 	bool "19MHz - 768MHz"
 	help
 	  Gives frequency table 19200 122880 245760 768000
+
+config CPUSPEED_HIGH652
+        bool "352MHz - 652MHz"
+        help
+          Gives frequency table 352000 652800
 
 config CPUSPEED_HIGH691
 	bool "352MHz - 691MHz"
