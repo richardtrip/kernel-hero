@@ -17,6 +17,34 @@
  *
  */
 
+#ifdef CONFIG_CPUSPEED_DEFAULT
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW691
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW652
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW729
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW748
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW768
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
+#ifdef CONFIG_CPUSPEED_LOW787
+#define MSM_CPUFREQ_MIN 352000
+#endif
+
 #include <linux/version.h>
 #include <linux/kernel.h>
 #include <linux/init.h>
@@ -245,7 +273,6 @@ static struct cpufreq_frequency_table msm72xx_freq_table[] = {
         { 3, 787200 },
         { 4, CPUFREQ_TABLE_END },
 /* Default low freq table 768 OC end */
-#endif
 #endif
 #else
 	{ 0, 19200 },
@@ -690,7 +717,7 @@ static ssize_t acpuclk_tbl_show(struct device *dev,
 
 	while (freq_table[i].frequency != CPUFREQ_TABLE_END) {
 		if (freq_table[i].frequency >=
-		    CONFIG_MSM_CPU_FREQ_ONDEMAND_MIN) {
+		    MSM_CPUFREQ_MIN) {
 			memset(buf, 0, 16);
 			result += sprintf(buf, "%u,", freq_table[i].frequency);
 			strcat(buffer, buf);
