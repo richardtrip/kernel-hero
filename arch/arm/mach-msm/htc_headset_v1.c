@@ -77,7 +77,9 @@
 #include <asm/mach-types.h>
 #include <mach/microp_i2c.h>
 #include <mach/drv_callback.h>
-
+#ifdef CONFIG_VFP
+#include <asm/vfp.h>
+#endif
 #ifdef CONFIG_HTC_AUDIOJACK_V1
 #include <mach/audio_jack.h>
 #endif

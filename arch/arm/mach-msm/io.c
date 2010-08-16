@@ -27,6 +27,9 @@
 #include <asm/mach/map.h>
 
 #include <mach/board.h>
+#ifdef CONFIG_VFP
+#include <asm/vfp.h>
+#endif
 
 #define MSM_DEVICE(name) { \
 		.virtual = (unsigned long) MSM_##name##_BASE, \
