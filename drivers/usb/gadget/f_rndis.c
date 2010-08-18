@@ -28,8 +28,13 @@
 #include <linux/kernel.h>
 #include <linux/platform_device.h>
 #include <linux/etherdevice.h>
+<<<<<<< HEAD
 #include <linux/netdevice.h>
 #include <linux/usb/android_composite.h>
+=======
+#include <linux/usb/android_composite.h>
+
+>>>>>>> d9ed25b... USB: gadget: import samsung/aosp rndis changes
 #include <asm/atomic.h>
 
 #include "u_ether.h"
@@ -864,7 +869,11 @@ int __init rndis_bind_config(struct usb_configuration *c, u8 ethaddr[ETH_ALEN])
 
 #ifdef CONFIG_USB_ANDROID_RNDIS
 	/* start disabled */
+<<<<<<< HEAD
 	rndis->port.func.disable = 1;
+=======
+	rndis->port.func.hidden = 1;
+>>>>>>> d9ed25b... USB: gadget: import samsung/aosp rndis changes
 #endif
 
 	status = usb_add_function(c, &rndis->port.func);

@@ -492,7 +492,11 @@ static inline int is_promisc(u16 cdc_filter)
 	return cdc_filter & USB_CDC_PACKET_TYPE_PROMISCUOUS;
 }
 
+<<<<<<< HEAD
 static int eth_start_xmit(struct sk_buff *skb,
+=======
+static netdev_tx_t eth_start_xmit(struct sk_buff *skb,
+>>>>>>> d9ed25b... USB: gadget: import samsung/aosp rndis changes
 					struct net_device *net)
 {
 	struct eth_dev		*dev = netdev_priv(net);
