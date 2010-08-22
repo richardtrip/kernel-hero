@@ -9,6 +9,9 @@
 #
 # Normal rules
 #
+adb
+fastboot
+bak/
 .*
 *.o
 *.o.*
