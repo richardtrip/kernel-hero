@@ -21,6 +21,9 @@
 #define MSM_CPUFREQ_MIN 19200
 #endif
 
+#ifdef CONFIG_CPUSPEED_LOW614
+#define MSM_CPUFREQ_MIN 19200
+
 #ifdef CONFIG_CPUSPEED_LOW691
 #define MSM_CPUFREQ_MIN 19200
 #endif
@@ -209,7 +212,18 @@ static struct cpufreq_frequency_table msm7227_freq_table[] = {
 static struct cpufreq_frequency_table msm72xx_freq_table[] = {
 #if defined(CONFIG_TURBO_MODE)
 #ifdef CONFIG_CPUSPEED_DEFAULT
-/* Default low freq table non OC start */
+/* Default low freq table 576 OC start */
+
+      { 0, 19200 },
+      { 1, 122880 },
+      { 2, 352000 },
+      { 3, 576000 },
+      { 4, CPUFREQ_TABLE_END },
+
+/* Default low freq table non OC end */
+#endif
+#ifdef CONFIG_CPUSPEED_LOW614
+/* Default low freq table 614 OC start */
 
       { 0, 19200 },
       { 1, 122880 },

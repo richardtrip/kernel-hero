@@ -69,7 +69,12 @@ choice
 	depends on CPU_FREQ
 
 config CPUSPEED_DEFAULT
-	bool "19MHz - 614MHz (default)"
+        bool "19MHz - 576MHz (default)"
+        help
+          Gives frequency table 19200 122880 352000 576000
+
+config CPUSPEED_LOW614
+	bool "19MHz - 614MHz"
 	help
 	  Gives frequency table 19200 122880 352000 614400
 
