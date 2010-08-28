@@ -71,42 +71,42 @@ choice
 config CPUSPEED_DEFAULT
         bool "19MHz - 576MHz (default)"
         help
-          Gives frequency table 19200 122880 352000 576000
+          Gives frequency table 122880 352000 576000
 
 config CPUSPEED_LOW614
 	bool "19MHz - 614MHz"
 	help
-	  Gives frequency table 19200 122880 352000 614400
+	  Gives frequency table 122880 352000 614400
 
 config CPUSPEED_LOW652
         bool "19MHz - 652MHz"
         help
-          Gives frequency table 19200 122880 352000 652800
+          Gives frequency table 122880 352000 652800
 
 config CPUSPEED_LOW691
 	bool "19MHz - 691MHz"
 	help
-	  Gives frequency table 19200 122880 352000 691200
+	  Gives frequency table 122880 352000 691200
 
 config CPUSPEED_LOW729
 	bool "19MHz - 729MHz"
 	help
-	  Gives frequency table 19200 122880 352000 729600
+	  Gives frequency table 122880 352000 729600
 
 config CPUSPEED_LOW748
 	bool "19MHz - 748MHz"
 	help
-	  Gives frequency table 19200 122880 352000 748800
+	  Gives frequency table 122880 352000 748800
 
 config CPUSPEED_LOW768
 	bool "19MHz - 768MHz"
 	help
-	  Gives frequency table 19200 122880 352000 768000
+	  Gives frequency table 122880 352000 768000
 
 config CPUSPEED_LOW787
         bool "19MHz - 787MHz"
         help
-          Gives frequency table 19200 122880 352000 787200
+          Gives frequency table 122880 352000 787200
 
 endchoice
 
