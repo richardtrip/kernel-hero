@@ -1926,9 +1926,8 @@ static int __init cpufreq_core_init(void)
 		per_cpu(policy_cpu, cpu) = -1;
 		init_rwsem(&per_cpu(cpu_policy_rwsem, cpu));
 	}
-
-	debugfs_create_u32("cpufreq_debug", 0600, NULL, &debug);
 	return 0;
+
 }
 
 core_initcall(cpufreq_core_init);
