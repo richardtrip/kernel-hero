@@ -113,8 +113,7 @@ static int hero_ts_power(int on)
 		msleep(2);
 	} else {
 		gpio_set_value(HERO_TP_LS_EN, 0);
-		//udelay(50);
-		usleep(50);
+		udelay(50);
 		gpio_set_value(HERO_GPIO_TP_EN, 0);
 	}
 	return 0;
