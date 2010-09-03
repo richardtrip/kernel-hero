@@ -1,7 +1,7 @@
 VERSION = 2
 PATCHLEVEL = 6
 SUBLEVEL = 29
-EXTRAVERSION = 
+EXTRAVERSION = bfstest01
 NAME = Temporary Tasmanian Devil
 
 # *DOCUMENTATION*
