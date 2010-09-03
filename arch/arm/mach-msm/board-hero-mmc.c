@@ -112,8 +112,8 @@ static uint32_t hero_sdslot_switchvdd(struct device *dev, unsigned int vdd)
 	if (!sdslot_vreg_enabled) {
 		mdelay(5);
 		vreg_enable(vreg_sdslot);
-		//udelay(500);
-		usleep(500);
+		udelay(500);
+		//usleep(500);
 		config_gpio_table(sdcard_on_gpio_table,
 				  ARRAY_SIZE(sdcard_on_gpio_table));
 		sdslot_vreg_enabled = 1;
@@ -256,9 +256,11 @@ int hero_wifi_power(int on)
 		vreg_enable(vreg_wifi_batpa);
 		vreg_set_level(vreg_wifi_batpa, 3000);
 		mdelay(50);
+		//usleep(50000);
 		rc = vreg_enable(vreg_wifi_osc);
 		vreg_set_level(vreg_wifi_osc, 1800);
 		mdelay(50);
+		//usleep(50000);
 		if (rc)
 			return rc;
 		htc_pwrsink_set(PWRSINK_WIFI, 70);
@@ -270,6 +272,7 @@ int hero_wifi_power(int on)
 
 	gpio_set_value( HERO_GPIO_WIFI_EN, on);
 	mdelay(100);
+	//usleep(100000);
 
 	if (!on) {
 		if(!hero_bt_power_state)

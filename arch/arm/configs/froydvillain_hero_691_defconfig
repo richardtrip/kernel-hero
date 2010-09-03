@@ -1,7 +1,7 @@
 #
 # Automatically generated make config: don't edit
 # Linux kernel version: 2.6.29
-# Sat Aug 28 09:37:09 2010
+# Tue Aug 31 10:59:17 2010
 #
 CONFIG_ARM=y
 CONFIG_SYS_SUPPORTS_APM_EMULATION=y
@@ -35,7 +35,7 @@ CONFIG_EXPERIMENTAL=y
 CONFIG_BROKEN_ON_SMP=y
 CONFIG_LOCK_KERNEL=y
 CONFIG_INIT_ENV_ARG_LIMIT=32
-CONFIG_LOCALVERSION="-nindroid-v2.6"
+CONFIG_LOCALVERSION="-nindroid-v3.0"
 # CONFIG_LOCALVERSION_AUTO is not set
 CONFIG_SWAP=y
 # CONFIG_SYSVIPC is not set

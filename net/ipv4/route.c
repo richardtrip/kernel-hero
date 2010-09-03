@@ -795,9 +795,9 @@ static void rt_check_expire(void)
 	goal = (unsigned int)mult;
 	if (goal > rt_hash_mask)
 		goal = rt_hash_mask + 1;
-	length = 0;
 	for (; goal > 0; goal--) {
 		unsigned long tmo = ip_rt_gc_timeout;
+		unsigned long length;
 
 		i = (i + 1) & rt_hash_mask;
 		rthp = &rt_hash_table[i].chain;

@@ -146,7 +146,7 @@ static int s6d04d1_unblank(struct msm_panel_data *panel_data)
 
         if (cabc_config.bl_handle) {
                 //mdelay(40);
-		msleep(40);
+		usleep(40000);
                 cabc_config.bl_handle(&mddi_samsung_cabc, LED_FULL);
         }
 

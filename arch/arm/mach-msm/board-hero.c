@@ -113,6 +113,7 @@ static int hero_ts_power(int on)
 		msleep(2);
 	} else {
 		gpio_set_value(HERO_TP_LS_EN, 0);
+		//usleep(50);
 		udelay(50);
 		gpio_set_value(HERO_GPIO_TP_EN, 0);
 	}
@@ -430,8 +431,8 @@ static int hero_microp_intr_debounce(uint8_t *pin_status)
 {
 /*Per HW RD's request, wait 300 mill-seconds.*/
 #if 1
-	//mdelay(100);
-	msleep(100);
+	mdelay(100);
+	//usleep(100000);
 	return 0;
 #else
 	static int count;
@@ -461,8 +462,8 @@ static int hero_microp_intr_debounce(uint8_t *pin_status)
 			data[count] = data[count + 1];
 	}
 
-	//mdelay(20);
-	msleep(20);
+	mdelay(20);
+	//usleep(20000);
 
 	return 1;
 #endif

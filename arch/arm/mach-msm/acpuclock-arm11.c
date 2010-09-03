@@ -185,69 +185,83 @@ static struct cpufreq_frequency_table msm72xx_freq_table[] = {
 #ifdef CONFIG_CPUSPEED_DEFAULT
 /* Default low freq table 576 OC start */
 
-      { 0, 122880 },
-      { 1, 245760 },
-      { 2, 352000 },
-      { 3, 576000 },
-      { 4, CPUFREQ_TABLE_END },
+      { 0, 19200 },
+      { 1, 122880 },
+      { 2, 176000 },
+      { 3, 245760 },
+      { 4, 352000 },
+      { 5, 576000 },
+      { 6, CPUFREQ_TABLE_END },
 
 /* Default low freq table non OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW614
 /* Default low freq table 614 OC start */
 
-      { 0, 122880 },
-      { 1, 245760 },
-      { 2, 352000 },
-      { 3, 614400 },
-      { 4, CPUFREQ_TABLE_END },
+      { 0, 19200 },
+      { 1, 122880 },
+      { 2, 176000 },      
+      { 3, 245760 },
+      { 4, 352000 },
+      { 5, 614400 },
+      { 6, CPUFREQ_TABLE_END },
 
 /* Default low freq table non OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW652
 /* Default low freq table 652 OC start */
-        { 0, 122880 },
-	{ 1, 245760 },
-        { 2, 352000 },
-        { 3, 652800 },
-        { 4, CPUFREQ_TABLE_END },
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 176000 },
+        { 3, 245760 },
+        { 4, 352000 },
+        { 5, 652800 },
+        { 6, CPUFREQ_TABLE_END },
 /* Default low freq table 652 OC end */
 #endif
 
 #ifdef CONFIG_CPUSPEED_LOW691
 /* Default low freq table 691 OC start */
-	{ 0, 122880 },
-	{ 1, 245760 },
-	{ 2, 352000 },
-	{ 3, 691200 },
-        { 4, CPUFREQ_TABLE_END },
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 176000 },
+	{ 3, 245760 },
+	{ 4, 352000 },
+	{ 5, 691200 },
+        { 6, CPUFREQ_TABLE_END },
 /* Default low freq table 691 OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW729
 /* Default low freq table 729 OC start */
-        { 0, 122880 },
-	{ 1, 245760 },
-        { 2, 352000 },
-	{ 3, 729600 },
-        { 4, CPUFREQ_TABLE_END },
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 176000 },
+        { 3, 245760 },
+        { 4, 352000 },
+	{ 5, 729600 },
+        { 6, CPUFREQ_TABLE_END },
 /* Default low freq table 729 OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW748
 /* Default low freq table 748 OC start */
-        { 0, 122880 },
-	{ 1, 245760 },
-        { 2, 352000 },
-	{ 3, 748800 },
-        { 4, CPUFREQ_TABLE_END },
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 176000 },
+        { 3, 245760 },
+        { 4, 352000 },
+	{ 5, 748800 },
+        { 6, CPUFREQ_TABLE_END },
 /* Default low freq table 748 OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW768
 /* Default low freq table 768 OC start */
-        { 0, 122880 },
-	{ 1, 245760 },
-        { 2, 352000 },
-	{ 3, 768000 },
-        { 4, CPUFREQ_TABLE_END },
+        { 0, 19200 },
+        { 1, 122880 },
+        { 2, 176000 },
+        { 3, 245760 },
+        { 4, 352000 },
+	{ 5, 768000 },
+        { 6, CPUFREQ_TABLE_END },
 /* Default low freq table 768 OC end */
 #endif
 #ifdef CONFIG_CPUSPEED_LOW787
@@ -257,7 +271,7 @@ static struct cpufreq_frequency_table msm72xx_freq_table[] = {
         { 2, 352000 },
         { 3, 787200 },
         { 4, CPUFREQ_TABLE_END },
-/* Default low freq table 768 OC end */
+/* Default low freq table 787 OC end */
 #endif
 #else
 	{ 0, 19200 },
@@ -407,7 +421,6 @@ static void acpuclk_set_div(const struct clkctl_acpu_speed *hunt_s) {
 		a11_div = 0;
 		 writel(hunt_s->a11clk_khz/19200, MSM_CLK_CTL_BASE+0x33c);
 		udelay(50);
-		//usleep(50);
 
 	}
 

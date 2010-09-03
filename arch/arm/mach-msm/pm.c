@@ -673,7 +673,7 @@ void msm_pm_flush_console(void)
 	}
 
 	//mdelay(50);
-	msleep(50);
+	usleep(50000);
 
 	local_irq_disable();
 	if (try_acquire_console_sem())
